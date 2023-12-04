@@ -1,10 +1,19 @@
-function changeText(inputName) {
-    document.getElementById("displayedText). innerHTML = 
+function onPress(inputValue) {
+    
+    const url =  https//pokeapi.co/api/v2/pokemon
+    $.get(url,function(data, status){
+       if (status === 'success' ) {
+        const pokemonNames = (data.results.map(showName))
+        console.log(pokemonNames);
+        document.getElementById("output").innerHTML = pokemonNames.join(' ');
+         }
+    });
+
+        
 
 
-    const myVariableName = (name: "Adam");
-    console.log(myVariableName.name);
+}
 
-    const myList = [];
-    console.log(myList[0)])
+function showNames(pokemon) {
+    return pokemon.name
 }
